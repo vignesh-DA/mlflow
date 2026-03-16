@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/Project/mlflow/mlruns/0/d4160602dc2f48f9850a822590f203dc/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d4160602dc2f48f9850a822590f203dc
+run_name: chill-mare-197
+run_uuid: d4160602dc2f48f9850a822590f203dc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773659125370
+status: 1
+tags: []
+user_id: gogul

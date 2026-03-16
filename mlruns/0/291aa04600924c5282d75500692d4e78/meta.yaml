@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/Project/mlflow/mlruns/0/291aa04600924c5282d75500692d4e78/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 291aa04600924c5282d75500692d4e78
+run_name: upset-moose-260
+run_uuid: 291aa04600924c5282d75500692d4e78
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773657518894
+status: 1
+tags: []
+user_id: gogul
