@@ -5,6 +5,13 @@
 import os
 import warnings
 import sys
+import dagshub
+dagshub.init(repo_owner='vignesh-DA', repo_name='mlflow', mlflow=True)
+
+import mlflow
+with mlflow.start_run():
+  mlflow.log_param('parameter name', 'value')
+  mlflow.log_metric('metric name', 1)
 
 import pandas as pd
 import numpy as np
@@ -75,24 +82,4 @@ if __name__ == "__main__":
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
 
-        #predictions = lr.predict(train_x)
-        #signature = infer_signature(train_x, predictions)
 
-        ## For Remote server only(DAGShub)
-
-        remote_server_uri="https://dagshub.com/krishnaik06/mlflowexperiments.mlflow"
-        mlflow.set_tracking_uri(remote_server_uri)
-
-        tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
-
-        # Model registry does not work with file store
-        if tracking_url_type_store != "file":
-            # Register the model
-            # There are other ways to use the Model Registry, which depends on the use case,
-            # please refer to the doc for more information:
-            # https://mlflow.org/docs/latest/model-registry.html#api-workflow
-            mlflow.sklearn.log_model(
-                lr, "model", registered_model_name="ElasticnetWineModel"
-            )
-        else:
-            mlflow.sklearn.log_model(lr, "model")
